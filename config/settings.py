@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "rest_framework",
+    'todo',
 ]
 
 MIDDLEWARE = [
@@ -76,10 +77,15 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'firstdjango_db',
+        'USER': 'firstdjango_user',
+        'PASSWORD': 'firstdjango_password',
+        'HOST': '127.0.0.1',  # or 'localhost'
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation
